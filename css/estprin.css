@@ -1,0 +1,122 @@
+body{margin: 0px; padding: 0px;}
+
+/* Estilos para pantalla monitor mayores a 1025*/
+@media screen and (min-width: 1025px)
+{
+    .contenedor{width: 1170px; margin: 0px auto;}
+
+    .menu{height: 70px; display: flex; align-items: center; position: fixed; top: 0; width: 1170px; background-color: rgba(255, 255, 255, 0.4); overflow: hidden; z-index: 10;}
+    #background-video{position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%);}
+    .menu .name{width: 300px; font-size: 50px; font-family: Perpetua, serif; padding-left: 20px; color: white;}
+    .menu .sections{width: 500px; margin-left: 50px; padding-left: 10px;}
+    .menu .sections a{text-decoration: none; font-size: 30px; font-family: Perpetua, serif; padding-left: 10px; color: white; border-right: 1px solid black; padding-right: 10px;}
+    .menu .sections a:last-child{border-right: none;}
+    .menu .icons{width: 120px; height: 35px; display: flex; gap: 10px; margin-left: 160px;}
+    .icons img{width: 30px; height: 30px; color: white;}
+
+    .contenido{height: 2347px;}
+    .contenido .banner{height: 600px; width: 1170px; background-image: url(C:\\Users\\DiegoMaldonado\\Downloads\\UASLPDR\\7MOSEMESTRE\\WEB\\PROYECTO\\img\\part.jpg); background-position: center; background-repeat: no-repeat;}
+    .contenido .banner img{width: 100%; height: 100%; object-fit: cover;}
+    .newalbum {display: flex; justify-content: center; align-items: center; width: 100%; height: 500px; background-color: black;} 
+    .spotify-player {width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;} 
+    .spotify-player iframe {width: 100%; height: 100%; border: none;}
+    
+    .contenido .calendar { font-family: Perpetua, serif; margin-top: 20px; }
+    .contenido .calendar h1 { font-size: 26px; color: #3A5DAE; margin-bottom: 20px; }
+    .contenido .calendar .concert { height: 150px; font-size: 18px; font-family: Perpetua, serif; border-bottom: 1px solid skyblue; display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+    .contenido .calendar .concert p { flex: 1; margin: 5px 10px; color: #000000; }
+    .contenido .calendar .concert p.concert-date, 
+    .contenido .calendar .concert p.concert-time { font-weight: bold; color: #000000; }
+    .contenido .calendar .concert p.concert-artist { font-size: 20px; font-weight: bold; color: #000; }
+    .contenido .calendar .concert p.concert-place { color: #000000; font-style: italic; }
+    .contenido .calendar .concert .buy-button { background-color: #4CAF50; color: white; padding: 15px 32px; font-size: 16px; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); transition: background-color 0.3s ease, box-shadow 0.3s ease; text-decoration: none;}
+    .contenido .calendar .concert .buy-button:hover { background-color: #45a049; box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); transform: scale(1.05); }
+    .contenido .calendar .concert:last-of-type { border-bottom: none; }
+    .contenido .calendar .show-more { text-align: center; margin-top: 30px; }
+    .contenido .calendar .show-more-button { background-color: #3A5DAE; color: white; padding: 15px 40px; font-size: 20px; font-weight: bold; border: none; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); transition: background-color 0.3s ease, box-shadow 0.3s ease; }
+    .contenido .calendar .show-more-button:hover { background-color: #2E4C89; box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); transform: scale(1.05); }
+    
+    .artists { display: flex; gap: 20px; justify-content: start; padding: 20px; overflow: hidden; white-space: nowrap;}
+    .artist { text-align: center; color: white; text-decoration: none; font-size: 14px; flex: 0 0 auto; }
+    .artist img { width: 200px; height: 200px; border-radius: 10px; object-fit: cover; transition: transform 0.3s ease-in-out; }
+    .artist img:hover { transform: scale(1.05); }
+    .artist p { margin-top: 10px; font-size: 16px; }
+    
+    .pie{height: 300px; position: relative;} 
+    .pie a{text-decoration: none;}
+    .pie img{width: 20px; height: 20px; z-index: 1; margin-top: 20px; margin-left: 20px;} 
+    .pie p{font-family: Perpetua, serif; font-size: 20px; color: white; z-index: 1; margin-left: 50px; margin-top: -20px;}
+    .pie h2{font-family: Perpetua, serif; font-size: 20px; color: white; z-index: 1; margin-left: 20px; margin-top: 30px;}
+    #pie-video {position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: -1;}
+
+}
+
+/* Estilos para pantalla tablet 680 y 1024 */
+@media screen and (min-width: 680px) and (max-width: 1024px) {
+    .contenedor { width: 100%; margin: 0 auto; }
+    .menu { height: 70px; display: flex; align-items: center; position: fixed; top: 0; width: 100%; background-color: rgba(255, 255, 255, 0.4); overflow: hidden; z-index: 10; }
+    #background-video { position: absolute; top: 0; left: 0; width: 100%; height: auto; z-index: -1; object-fit: cover; }
+    .menu .name { width: 200px; font-size: 30px; font-family: Perpetua, serif; padding-left: 20px; color: white; }
+    .menu .sections { width: auto; margin-left: 10px; padding-left: 10px; }
+    .menu .sections a { text-decoration: none; font-size: 20px; font-family: Perpetua, serif; padding-left: 10px; color: white; border-right: 1px solid black; padding-right: 10px; }
+    .menu .sections a:last-child { border-right: none; }
+    .menu .icons { width: auto; height: 35px; display: flex; gap: 10px; margin-left: 10px; }
+    .icons img { width: 25px; height: 25px; color: white; }
+    .contenido .banner { height: 400px; width: 100%; }
+    .contenido .banner img { width: 100%; height: 100%; object-fit: cover; }
+    .contenido .newalbum { height: 300px; display: flex; justify-content: center; align-items: center; }
+    .spotify-player { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
+    .spotify-player iframe { width: 100%; height: 100%; border: none; }
+    .contenido .calendar .concert { font-size: 16px; padding: 15px; margin: 10px 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .contenido .calendar .concert .buy-button { background-color: #4CAF50; color: white; padding: 12px 25px; font-size: 14px; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); transition: background-color 0.3s ease, box-shadow 0.3s ease; text-decoration: none; }
+    .contenido .calendar .concert .buy-button:hover { background-color: #45a049; box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); }
+    .contenido .calendar .show-more { margin-top: 20px; text-align: center; }
+    .contenido .calendar .show-more-button { padding: 10px 20px; font-size: 14px; background-color: #3A5DAE; color: white; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease; }
+    .contenido .calendar .show-more-button:hover { background-color: #2E4C89; }
+    .artists { display: flex; gap: 15px; overflow-x: auto; padding: 20px; }
+    .artist { text-align: center; color: white; text-decoration: none; font-size: 14px; flex: 0 0 auto; width: 150px; }
+    .artist img { width: 100%; height: auto; border-radius: 10px; object-fit: cover; transition: transform 0.3s ease-in-out; }
+    .artist img:hover { transform: scale(1.05); }
+    .artist p { margin-top: 10px; font-size: 16px; }
+    .pie { height: 240px; position: relative; background-color: rgba(0, 0, 0, 0.5); padding: 20px; }
+    .pie a { text-decoration: none; }
+    .pie img { width: 20px; height: 20px; margin: 10px; }
+    .pie p { font-family: Perpetua, serif; font-size: 18px; color: white; margin: 0 10px; }
+    .pie h2 { font-family: Perpetua, serif; font-size: 18px; color: white; margin: 10px 0; }
+    #pie-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+}
+
+/* Estilos para pantalla móvil 1 y 679 */
+@media screen and (min-width: 1px) and (max-width: 679px) {
+    .contenedor { width: 100%; margin: 0 auto; }
+    .menu { height: 50px; display: flex; align-items: center; position: fixed; top: 0; width: 100%; background-color: rgba(255, 255, 255, 0.4); overflow: hidden; z-index: 10; }
+    #background-video { position: absolute; top: 0; left: 0; width: 100%; height: auto; z-index: -1; object-fit: cover; }
+    .menu .name { width: auto; font-size: 20px; font-family: Perpetua, serif; padding-left: 10px; color: white; }
+    .menu .sections { width: auto; margin-left: 5px; padding-left: 5px; }
+    .menu .sections a { text-decoration: none; font-size: 16px; font-family: Perpetua, serif; padding-left: 5px; color: white; border-right: 1px solid black; padding-right: 5px; }
+    .menu .sections a:last-child { border-right: none; }
+    .menu .icons { width: auto; height: 30px; display: flex; gap: 5px; margin-left: 5px; }
+    .icons img { width: 20px; height: 20px; color: white; }
+    .contenido .banner { height: 300px; width: 100%; }
+    .contenido .banner img { width: 100%; height: 100%; object-fit: cover; }
+    .contenido .newalbum { height: 250px; display: flex; justify-content: center; align-items: center; }
+    .spotify-player { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
+    .spotify-player iframe { width: 100%; height: 100%; border: none; }
+    .contenido .calendar .concert { font-size: 14px; padding: 10px; margin: 5px 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .contenido .calendar .concert .buy-button { background-color: #4CAF50; color: white; padding: 10px 20px; font-size: 12px; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); transition: background-color 0.3s ease, box-shadow 0.3s ease; }
+    .contenido .calendar .concert .buy-button:hover { background-color: #45a049; box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); }
+    .contenido .calendar .show-more { margin-top: 15px; text-align: center; }
+    .contenido .calendar .show-more-button { padding: 8px 15px; font-size: 12px; background-color: #3A5DAE; color: white; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s ease; }
+    .contenido .calendar .show-more-button:hover { background-color: #2E4C89; }
+    .artists { display: flex; gap: 10px; overflow-x: auto; padding: 10px; }
+    .artist { text-align: center; color: white; text-decoration: none; font-size: 14px; flex: 0 0 auto; width: 100px; }
+    .artist img { width: 100%; height: auto; border-radius: 10px; object-fit: cover; transition: transform 0.3s ease-in-out; }
+    .artist img:hover { transform: scale(1.05); }
+    .artist p { margin-top: 5px; font-size: 14px; }
+    .pie { height: 200px; position: relative; background-color: rgba(0, 0, 0, 0.5); padding: 10px; }
+    .pie a { text-decoration: none; }
+    .pie img { width: 15px; height: 15px; margin: 5px; }
+    .pie p { font-family: Perpetua, serif; font-size: 12px; color: white; margin: 5px; }
+    .pie h2 { font-family: Perpetua, serif; font-size: 12px; color: white; margin: 5px 0; }
+    #pie-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+}

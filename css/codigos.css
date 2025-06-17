@@ -1,0 +1,115 @@
+body { margin: 0; padding: 0; }
+
+/* Estilos para pantallas mayores a 1025px (monitor) */
+@media screen and (min-width: 1025px) {
+    #background-video { position: fixed; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%); filter: brightness(0.5); }
+    .login-register-container {
+        display: flex; justify-content: center; align-items: center; height: 100vh;
+        text-align: center; position: relative;
+    }
+    .form-wrapper {
+        width: 90%; max-width: 800px; background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); padding: 20px;
+    }
+    h2 {
+        font-size: 24px; color: #333; margin-bottom: 20px;
+        border-bottom: 2px solid #3A5DAE; padding-bottom: 10px;
+    }
+    p { font-size: 16px; color: #333; margin-bottom: 20px; }
+    .add-code-form {
+        display: flex; gap: 10px; margin-bottom: 20px; justify-content: center;
+    }
+    .add-code-form input {
+        padding: 10px; font-size: 14px; border: 1px solid #ddd; border-radius: 5px;
+    }
+    .add-code-form button {
+        background-color: #3A5DAE; color: white; padding: 10px 20px;
+        font-size: 14px; border: none; border-radius: 5px; cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .add-code-form button:hover {
+        background-color: #2E4C89;
+    }
+    table {
+        width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px;
+    }
+    thead { background-color: #3A5DAE; color: white; }
+    thead th {
+        padding: 10px; text-align: left; font-size: 14px;
+    }
+    tbody tr { background-color: white; border-bottom: 1px solid #ddd; }
+    tbody tr:hover { background-color: #f9f9f9; }
+    td {
+        padding: 10px; text-align: left; word-break: break-word;
+    }
+    .delete-button {
+        background-color: #F44336; color: white; padding: 8px 15px; font-size: 12px;
+        border: none; border-radius: 5px; cursor: pointer; text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    .delete-button:hover {
+        background-color: #D32F2F;
+    }
+    .back-button-container { margin-top: 20px; text-align: center; }
+    .back-button {
+        background-color: #3A5DAE; color: white; padding: 10px 20px; font-size: 14px;
+        border: none; border-radius: 5px; cursor: pointer; text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    .back-button:hover { background-color: #2E4C89; }
+}
+
+/* Estilos para pantallas tablet entre 680px y 1024px */
+@media screen and (min-width: 680px) and (max-width: 1024px) {
+    .login-register-container {
+        display: flex; justify-content: center; align-items: center; height: auto;
+        text-align: center; padding: 20px;
+    }
+    .form-wrapper {
+        width: 100%; max-width: 700px; background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); padding: 20px;
+    }
+    h2 {
+        font-size: 22px; color: #333; margin-bottom: 15px;
+        border-bottom: 2px solid #3A5DAE; padding-bottom: 10px;
+    }
+    table {
+        font-size: 12px; margin-top: 15px;
+    }
+    .add-code-form {
+        flex-direction: column; align-items: center; gap: 10px;
+    }
+    .add-code-form input, .add-code-form button {
+        width: 100%; max-width: 90%; padding: 10px;
+    }
+}
+
+/* Estilos para pantallas móviles entre 1px y 679px */
+@media screen and (min-width: 1px) and (max-width: 679px) {
+    .login-register-container {
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+        text-align: center; padding: 15px;
+    }
+    .form-wrapper {
+        width: 95%; background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); padding: 15px;
+    }
+    h2 {
+        font-size: 20px; color: #333; margin-bottom: 15px;
+        border-bottom: 2px solid #3A5DAE; padding-bottom: 10px;
+    }
+    table {
+        font-size: 10px; margin-top: 10px; word-wrap: break-word;
+        display: block; overflow-x: auto; width: 100%;
+    }
+    .add-code-form {
+        flex-direction: column; gap: 8px; width: 100%;
+    }
+    .add-code-form input, .add-code-form button {
+        width: 100%; max-width: 100%; padding: 8px;
+    }
+    td, th { padding: 6px; font-size: 10px; }
+    .delete-button, .back-button {
+        font-size: 12px; padding: 8px; width: 100%; box-sizing: border-box;
+    }
+}

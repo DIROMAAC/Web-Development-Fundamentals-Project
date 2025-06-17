@@ -1,0 +1,94 @@
+body{margin: 0px; padding: 0px;}
+
+/* Estilos para pantalla monitor mayores a 1025*/
+@media screen and (min-width: 1025px) { 
+    .contenedor { width: 1170px; margin: 0px auto; }
+    .menu { height: 70px; display: flex; align-items: center; position: fixed; top: 0; width: 1170px; background-color: rgba(255, 255, 255, 0.4); overflow: hidden; z-index: 10; }
+    #background-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%); object-fit: cover; }
+    .menu .name { width: 300px; font-size: 50px; font-family: Perpetua, serif; padding-left: 20px; color: white; }
+    .menu .sections { width: 500px; margin-left: 50px; padding-left: 10px; }
+    .menu .sections a { text-decoration: none; font-size: 30px; font-family: Perpetua, serif; padding-left: 10px; color: white; border-right: 1px solid black; padding-right: 10px; }
+    .menu .sections a:last-child { border-right: none; }
+    .menu .icons { width: 120px; height: 35px; display: flex; gap: 10px; margin-left: 160px; }
+    .icons img { width: 30px; height: 30px; color: white; }
+
+    .contenido { margin-top: 120px; padding: 20px; text-align: center; font-family: Perpetua, serif; display: flex; justify-content: center; align-items: center; flex-direction: column; min-height: calc(100vh - 370px); background-color: rgba(255, 255, 255, 0.8); border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
+    .contenido h1 { font-size: 40px; color: #3A5DAE; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 2px; }
+    .contenido form { max-width: 600px; width: 100%; padding: 30px; background: #FFFFFF; border-radius: 15px; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); display: flex; flex-direction: column; gap: 20px; }
+    .form-group { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+    .form-group label { font-size: 18px; color: #333; text-align: left; font-family: 'Arial', sans-serif; margin-bottom: 5px; }
+    .form-group input { width: 100%; padding: 12px 15px; font-size: 16px; border: 1px solid #ddd; border-radius: 8px; background-color: rgba(255, 255, 255, 0.8); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); color: #333; transition: all 0.3s ease; }
+    .form-group input:focus { outline: none; background-color: rgba(255, 255, 255, 1); box-shadow: 0 0 5px rgba(58, 93, 174, 0.5); }
+    .btn-submit { background-color: #3A5DAE; color: white; padding: 15px; font-size: 18px; border: none; border-radius: 10px; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: background-color 0.3s ease, transform 0.2s ease; }
+    .btn-submit:hover { background-color: #2E4C89; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(58, 93, 174, 0.5); }
+    .btn-submit:active { transform: translateY(0); box-shadow: 0 3px 8px rgba(58, 93, 174, 0.3); }
+    
+    .pie { height: 300px; position: relative; }
+    .pie a { text-decoration: none; }
+    .pie img { width: 20px; height: 20px; z-index: 1; margin-top: 20px; margin-left: 20px; }
+    .pie p { font-family: Perpetua, serif; font-size: 20px; color: white; z-index: 1; margin-left: 50px; margin-top: -20px; }
+    .pie h2 { font-family: Perpetua, serif; font-size: 20px; color: white; z-index: 1; margin-left: 20px; margin-top: 30px; }
+    #pie-video { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: -1; }
+
+}
+
+/* Estilos para pantalla tablet 680 y 1024 */
+@media screen and (min-width: 680px) and (max-width: 1024px) {
+    .contenedor {width: 100%; margin: 0 auto;} 
+    .menu {height: 70px; display: flex; align-items: center; position: fixed; top: 0; width: 100%; background-color: rgba(255, 255, 255, 0.4); z-index: 10;} 
+    #background-video {position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; z-index: -1; transform: translate(-50%, -50%);} 
+    .menu .name {width: auto; font-size: 30px; font-family: Perpetua, serif; padding-left: 10px; color: white;} 
+    .menu .sections {width: auto; display: flex; gap: 10px; padding-left: 10px;} 
+    .menu .sections a {text-decoration: none; font-size: 18px; font-family: Perpetua, serif; padding: 5px; color: white; border-right: 1px solid black;} 
+    .menu .sections a:last-child {border-right: none;} 
+    .menu .icons {display: flex; gap: 10px; margin-left: auto; padding-right: 10px;} 
+    .icons img {width: 25px; height: 25px; transition: transform 0.3s ease;} 
+    .icons img:hover {transform: scale(1.2);} 
+
+    .contenido {margin-top: 80px; padding: 20px; text-align: center; background-color: rgba(255, 255, 255, 0.9); border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);} 
+    .contenido h1 {font-size: 32px; color: #3A5DAE; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;} 
+    .contenido form {display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto; padding: 25px; background: #FFFFFF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);} 
+    .form-group {display: flex; flex-direction: column; text-align: left; gap: 10px;} 
+    .form-group label {font-size: 16px; font-weight: bold; color: #333;} 
+    .form-group input {padding: 12px; font-size: 14px; border: 1px solid #ddd; border-radius: 8px; background: rgba(255, 255, 255, 0.8); transition: all 0.3s ease;} 
+    .form-group input:focus {outline: none; background: #FFF; box-shadow: 0 0 4px rgba(58, 93, 174, 0.5); border-color: #3A5DAE;} 
+    .btn-submit {padding: 15px; font-size: 16px; background-color: #3A5DAE; color: white; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease;} 
+    .btn-submit:hover {background-color: #2E4C89; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(58, 93, 174, 0.5);} 
+
+    .pie { height: 240px; position: relative; background-color: rgba(0, 0, 0, 0.5); padding: 20px; }
+    .pie a { text-decoration: none; }
+    .pie img { width: 20px; height: 20px; margin: 10px; }
+    .pie p { font-family: Perpetua, serif; font-size: 18px; color: white; margin: 0 10px; }
+    .pie h2 { font-family: Perpetua, serif; font-size: 18px; color: white; margin: 10px 0; }
+    #pie-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+}
+
+/* Estilos para pantalla móvil 1 y 679 */
+@media screen and (min-width: 1px) and (max-width: 679px) {
+    .contenedor { width: 100%; margin: 0 auto; }
+    .menu { height: 50px; display: flex; align-items: center; position: fixed; top: 0; width: 100%; background-color: rgba(255, 255, 255, 0.4); overflow: hidden; z-index: 10; }
+    #background-video { position: absolute; top: 0; left: 0; width: 100%; height: auto; z-index: -1; object-fit: cover; }
+    .menu .name { width: auto; font-size: 20px; font-family: Perpetua, serif; padding-left: 10px; color: white; }
+    .menu .sections { width: auto; margin-left: 5px; padding-left: 5px; }
+    .menu .sections a { text-decoration: none; font-size: 16px; font-family: Perpetua, serif; padding-left: 5px; color: white; border-right: 1px solid black; padding-right: 5px; }
+    .menu .sections a:last-child { border-right: none; }
+    .menu .icons { width: auto; height: 30px; display: flex; gap: 5px; margin-left: 5px; }
+    .icons img { width: 20px; height: 20px; color: white; }
+
+    .contenido {margin-top: 70px; padding: 15px; text-align: center; background-color: rgba(255, 255, 255, 0.95); border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);} 
+    .contenido h1 {font-size: 24px; color: #3A5DAE; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;} 
+    .contenido form {display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: 0 auto; padding: 20px; background: #FFFFFF; border-radius: 10px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);} 
+    .form-group {display: flex; flex-direction: column; text-align: left; gap: 8px;} 
+    .form-group label {font-size: 14px; font-weight: bold; color: #333;} 
+    .form-group input {padding: 10px; font-size: 12px; border: 1px solid #ddd; border-radius: 6px; background: rgba(255, 255, 255, 0.85); transition: all 0.3s ease;} 
+    .form-group input:focus {outline: none; background: #FFF; box-shadow: 0 0 3px rgba(58, 93, 174, 0.4); border-color: #3A5DAE;} 
+    .btn-submit {padding: 12px; font-size: 14px; background-color: #3A5DAE; color: white; border: none; border-radius: 6px; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease;} 
+    .btn-submit:hover {background-color: #2E4C89; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(58, 93, 174, 0.5);} 
+
+    .pie {height: 250px; background-color: rgba(0, 0, 0, 0.5); padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; margin-top: 30px;} 
+    .pie img {width: 15px; height: 15px; margin: 5px;} 
+    .pie p {font-size: 12px; color: white; margin: 5px;} 
+    .pie h2 {font-size: 12px; color: white; margin: 5px;} 
+    #pie-video {position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;} 
+}
+

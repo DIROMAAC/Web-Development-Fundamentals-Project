@@ -1,0 +1,89 @@
+body{margin: 0px; padding: 0px;}
+
+/* Estilos para pantalla monitor mayores a 1025*/
+@media screen and (min-width: 1025px)
+{
+    .contenedor {width: 1170px; margin: 0 auto;} 
+    .menu {height: 70px; display: flex; align-items: center; position: fixed; top: 0; width: 1170px; background-color: rgba(255, 255, 255, 0.4); overflow: hidden; z-index: 10;} 
+    #background-video {position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%);} 
+    .menu .name {width: 300px; font-size: 50px; font-family: Perpetua, serif; padding-left: 20px; color: white;} 
+    .menu .sections {width: 500px; margin-left: 50px; padding-left: 10px;} 
+    .menu .sections a {text-decoration: none; font-size: 30px; font-family: Perpetua, serif; padding-left: 10px; color: white; border-right: 1px solid black; padding-right: 10px;} 
+    .menu .sections a:last-child {border-right: none;} 
+    .menu .icons {width: 120px; height: 35px; display: flex; gap: 10px; margin-left: 160px;} 
+    .icons img {width: 30px; height: 30px; color: white;} 
+
+    .contenido {padding-top: 100px; text-align: center; min-height: 100vh;} 
+    .artist-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; justify-items: center; padding: 20px;} 
+    .artist {text-align: center; width: 200px; text-decoration: none;} 
+    .artist img {width: 100%; height: auto; border-radius: 10px; transition: transform 0.3s;} 
+    .artist img:hover {transform: scale(1.05);} 
+    .artist p {font-size: 18px; font-family: Perpetua, serif; color: black; margin-top: 10px;} 
+    .artist:hover p {color: #444444;} /* Cambiar color del texto al pasar el mouse */
+    
+    .pie {height: 300px; position: relative; margin-top: 50px; clear: both;} 
+    .pie a {text-decoration: none;} 
+    .pie img {width: 20px; height: 20px; z-index: 1; margin-top: 20px; margin-left: 20px;} 
+    .pie p {font-family: Perpetua, serif; font-size: 20px; color: white; z-index: 1; margin-left: 50px; margin-top: -20px;} 
+    .pie h2 {font-family: Perpetua, serif; font-size: 20px; color: white; z-index: 1; margin-left: 20px; margin-top: 30px;} 
+    #pie-video {position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: -1;}
+
+}
+
+/* Estilos para pantalla tablet 680px a 1024px */
+@media screen and (min-width: 680px) and (max-width: 1024px) {
+    .contenedor {width: 100%; margin: 0 auto;} 
+    .menu {height: 70px; display: flex; align-items: center; position: fixed; top: 0; width: 100%; background-color: rgba(255, 255, 255, 0.4); z-index: 10;} 
+    #background-video {position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; z-index: -1; transform: translate(-50%, -50%);} 
+    .menu .name {width: auto; font-size: 30px; font-family: Perpetua, serif; padding-left: 10px; color: white;} 
+    .menu .sections {width: auto; display: flex; gap: 10px; padding-left: 10px;} 
+    .menu .sections a {text-decoration: none; font-size: 18px; font-family: Perpetua, serif; padding: 5px; color: white; border-right: 1px solid black;} 
+    .menu .sections a:last-child {border-right: none;} 
+    .menu .icons {display: flex; gap: 10px; margin-left: auto; padding-right: 10px;} 
+    .icons img {width: 25px; height: 25px; transition: transform 0.3s ease;} 
+    .icons img:hover {transform: scale(1.2);} 
+
+    .contenido {padding-top: 100px; text-align: center; min-height: 100vh; padding: 20px;} 
+    .artist-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; justify-items: center;} 
+    .artist {text-align: center; width: 180px; text-decoration: none;} 
+    .artist img {width: 100%; height: auto; border-radius: 10px; transition: transform 0.3s;} 
+    .artist img:hover {transform: scale(1.05);} 
+    .artist p {font-size: 16px; font-family: Perpetua, serif; color: black; margin-top: 10px;} 
+    .artist:hover p {color: #444444;} 
+
+    .pie {height: 250px; background-color: rgba(0, 0, 0, 0.5); padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative;} 
+    .pie img {width: 15px; height: 15px; margin: 5px;} 
+    .pie p {font-size: 14px; color: white; margin: 5px;} 
+    .pie h2 {font-size: 14px; color: white; margin: 5px;} 
+    #pie-video {position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;} 
+}
+
+/* Estilos para pantalla móvil 1px a 679px */
+@media screen and (min-width: 1px) and (max-width: 679px) {
+    .contenedor {width: 100%; margin: 0 auto;} 
+    .menu { height: 50px; display: flex; align-items: center; position: fixed; top: 0; width: 100%; background-color: rgba(255, 255, 255, 0.4); overflow: hidden; z-index: 10; }
+    #background-video { position: absolute; top: 0; left: 0; width: 100%; height: auto; z-index: -1; object-fit: cover; }
+    .menu .name { width: auto; font-size: 20px; font-family: Perpetua, serif; padding-left: 10px; color: white; }
+    .menu .sections { width: auto; margin-left: 5px; padding-left: 5px; }
+    .menu .sections a { text-decoration: none; font-size: 16px; font-family: Perpetua, serif; padding-left: 5px; color: white; border-right: 1px solid black; padding-right: 5px; }
+    .menu .sections a:last-child { border-right: none; }
+    .menu .icons { width: auto; height: 30px; display: flex; gap: 5px; margin-left: 5px; }
+    .icons img { width: 20px; height: 20px; color: white; }
+
+    .contenido {padding-top: 150px; text-align: center; padding: 15px;} 
+    .artist-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; justify-items: center;} 
+    .artist {text-align: center; width: 140px; text-decoration: none;} 
+    .artist:first-child img {margin-top: 20px;} /* Aumentar margen superior para la primera imagen */
+    .artist:first-child + .artist img {margin-top: 15px;} /* Aumentar margen superior para la segunda imagen */
+    .artist img {width: 100%; height: auto; border-radius: 10px; transition: transform 0.3s;} 
+    .artist img:hover {transform: scale(1.05);} 
+    .artist p {font-size: 14px; font-family: Perpetua, serif; color: black; margin-top: 10px;} 
+    .artist:hover p {color: #444444;} 
+
+    .pie {height: 200px; background-color: rgba(0, 0, 0, 0.5); padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative;} 
+    .pie img {width: 10px; height: 10px; margin: 5px;} 
+    .pie p {font-size: 12px; color: white; margin: 5px;} 
+    .pie h2 {font-size: 12px; color: white; margin: 5px;} 
+    #pie-video {position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;} 
+}
+

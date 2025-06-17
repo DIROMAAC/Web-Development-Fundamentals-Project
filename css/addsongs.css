@@ -1,0 +1,251 @@
+/* Reset de márgenes y rellenos */
+body, h2, p, h3, form, input, select, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fondo de video */
+#background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    filter: brightness(0.5);
+}
+
+/* Estilo del contenedor principal */
+.login-register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+/* Estilo del formulario */
+.form-wrapper {
+    width: 90%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+/* Título del formulario */
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3A5DAE;
+    padding-bottom: 10px;
+}
+
+/* Mensaje de éxito o error */
+p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo del formulario */
+.add-code-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.add-code-form input,
+.add-code-form select,
+.add-code-form button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.add-code-form button {
+    background-color: #3A5DAE;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-code-form button:hover {
+    background-color: #2E4C89;
+}
+
+/* Estilo del botón de regresar */
+.back-button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-button {
+    background-color: #3A5DAE;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #2E4C89;
+}
+
+/* Estilos comunes para los botones de modificar y eliminar */
+.modify-button, .delete-button {
+    background-color: #3A5DAE;
+    color: white;
+    padding: 8px 15px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.modify-button:hover {
+    background-color: #2E4C89;
+}
+
+.delete-button {
+    background-color: #F44336;
+    padding: 8px 15px;
+}
+
+.delete-button:hover {
+    background-color: #D32F2F;
+}
+
+/* Estilos para pantallas mayores a 1025px (monitor) */
+@media screen and (min-width: 1025px) {
+    .login-register-container {
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .form-wrapper {
+        width: 60%;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .add-code-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .add-code-form input,
+    .add-code-form select,
+    .add-code-form button {
+        width: 100%;
+    }
+}
+
+/* Estilos para pantallas tablet entre 680px y 1024px */
+@media screen and (min-width: 680px) and (max-width: 1024px) {
+    .login-register-container {
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .form-wrapper {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .add-code-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .add-code-form input,
+    .add-code-form button {
+        width: 90%;
+    }
+}
+
+/* Estilos para pantallas móviles entre 1px y 679px */
+@media screen and (min-width: 1px) and (max-width: 679px) {
+    .login-register-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .form-wrapper {
+        width: 95%;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .add-code-form {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .add-code-form input,
+    .add-code-form button {
+        width: 100%;
+        max-width: 100%;
+        padding: 8px;
+    }
+
+    td, th {
+        padding: 6px;
+        font-size: 10px;
+    }
+
+    .delete-button, .back-button {
+        font-size: 12px;
+        padding: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

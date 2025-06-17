@@ -1,0 +1,189 @@
+body { margin: 0px; padding: 0px; }
+
+/* Estilos para pantalla monitor mayores a 1025 */
+@media screen and (min-width: 1025px) {
+    .contenedor { width: 1170px; margin: 0 auto; }
+    .menu { height: 70px; display: flex; align-items: center; position: fixed; top: 0; width: 1170px; background-color: rgba(255, 255, 255, 0.4); overflow: hidden; z-index: 10; }
+    #background-video { position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%); }
+    .menu .name { width: 300px; font-size: 50px; font-family: Perpetua, serif; padding-left: 20px; color: white; }
+    .menu .sections { width: 500px; margin-left: 50px; padding-left: 10px; }
+    .menu .sections a { text-decoration: none; font-size: 30px; font-family: Perpetua, serif; padding-left: 10px; color: white; border-right: 1px solid black; padding-right: 10px; }
+    .menu .sections a:last-child { border-right: none; }
+    .menu .icons { width: 120px; height: 35px; display: flex; gap: 10px; margin-left: 160px; }
+    .icons img { width: 30px; height: 30px; color: white; }
+    .contenido { padding-top: 100px; text-align: center; min-height: 100vh; }
+    .artist-grid { display: flex; flex-direction: column; gap: 20px; justify-items: center; margin-top: 20px; }
+    #artist-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Espacio entre cada artista */
+    }
+    .artist {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #songs-container {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #songs-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .song {
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .song p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    audio {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .artist-link { text-decoration: none; }
+    .artist-info { display: flex; align-items: center; gap: 20px; justify-content: center; width: 700px; }
+    .artist-img { width: 150px; height: auto; border-radius: 10px; transition: transform 0.3s; }
+    .artist-img:hover { transform: scale(1.05); }
+    .artist-bio { max-width: 400px; text-align: left; }
+    .artist-name { font-size: 20px; font-family: Perpetua, serif; color: black; margin: 0; }
+    .artist-description { font-size: 16px; font-family: Arial, sans-serif; color: #555; margin-top: 10px; width: 850px; }
+    .add-artist-button {
+        position: absolute; /* Fijar el botón en la pantalla */
+        top: 100px; /* Distancia desde la parte superior */
+        left: 1180px; /* Distancia desde la derecha */
+         /* Para asegurarse de que esté por encima del contenido */
+    }
+    
+    .btn-add-artist {
+        background-color: #192bf2e0; /* Color de fondo */
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    
+    .btn-add-artist:hover {
+        background-color: #1225f3; /* Cambio de color al pasar el mouse */
+    }
+    
+    .add-songs { margin-top: 20px; text-align: center; }
+    .add-songs-button { display: inline-block; padding: 10px 20px; background-color: #55c1a4cc; color: white; text-decoration: none; font-size: 18px; border-radius: 5px; transition: background-color 0.3s; }
+    .add-songs-button:hover { background-color: #4caf95; }
+    .pie { height: 300px; position: relative; margin-top: 50px; clear: both; }
+    .pie a { text-decoration: none; }
+    .pie img { width: 20px; height: 20px; z-index: 1; margin-top: 20px; margin-left: 20px; }
+    .pie p { font-family: Perpetua, serif; font-size: 20px; color: white; z-index: 1; margin-left: 50px; margin-top: -20px; }
+    .pie h2 { font-family: Perpetua, serif; font-size: 20px; color: white; z-index: 1; margin-left: 20px; margin-top: 30px; }
+    #pie-video { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: -1; }
+    .modify-button { display: inline-block; padding: 8px 16px; background-color: #FFA500; color: white; text-decoration: none; font-size: 14px; border-radius: 5px; transition: background-color 0.3s; }
+    .modify-button:hover { background-color: #FF8C00; }
+    .delete-button { display: inline-block; padding: 8px 16px; background-color: #F44336; color: white; text-decoration: none; font-size: 14px; border-radius: 5px; transition: background-color 0.3s; }
+    .delete-button:hover { background-color: #D32F2F; }
+
+}
+
+/* Estilos para pantalla tablet 680px a 1024px */
+@media screen and (min-width: 680px) and (max-width: 1024px) {
+    .contenedor { width: 100%; margin: 0 auto; }
+    .menu { height: 70px; display: flex; align-items: center; position: fixed; top: 0; width: 100%; background-color: rgba(255, 255, 255, 0.4); z-index: 10; }
+    #background-video { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; z-index: -1; transform: translate(-50%, -50%); }
+    .menu .name { width: auto; font-size: 30px; font-family: Perpetua, serif; padding-left: 10px; color: white; }
+    .menu .sections { width: auto; display: flex; gap: 10px; padding-left: 10px; }
+    .menu .sections a { text-decoration: none; font-size: 18px; font-family: Perpetua, serif; padding: 5px; color: white; border-right: 1px solid black; }
+    .menu .sections a:last-child { border-right: none; }
+    .menu .icons { display: flex; gap: 10px; margin-left: auto; padding-right: 10px; }
+    .icons img { width: 25px; height: 25px; transition: transform 0.3s ease; }
+    .icons img:hover { transform: scale(1.2); }
+
+    .contenido { padding-top: 100px; text-align: center; min-height: 100vh; padding: 20px; }
+    .artist-grid { display: flex; flex-direction: column; gap: 15px; justify-items: center; }
+    .artist { text-align: center; width: 180px; text-decoration: none; }
+    .artist-info { display: flex; align-items: center; gap: 20px; justify-content: center; }
+    .artist-img { width: 150px; height: auto; border-radius: 10px; transition: transform 0.3s; }
+    .artist-img:hover { transform: scale(1.05); }
+    .artist-bio { max-width: 400px; text-align: left; }
+    .artist-name { font-size: 18px; font-family: Perpetua, serif; color: black; margin: 0; }
+    .artist-description { font-size: 16px; font-family: Arial, sans-serif; color: #555; margin-top: 10px; }
+
+    /* Botones de admin visibles */
+    .admin-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        justify-content: center;
+    }
+    .modify-button, .delete-button {
+        font-size: 14px;
+        padding: 8px 16px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    .modify-button { background-color: #FFA500; color: white; }
+    .modify-button:hover { background-color: #FF8C00; }
+    .delete-button { background-color: #F44336; color: white; }
+    .delete-button:hover { background-color: #D32F2F; }
+
+    .pie { height: 250px; background-color: rgba(0, 0, 0, 0.5); padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; }
+    .pie img { width: 15px; height: 15px; margin: 5px; }
+    .pie p { font-size: 14px; color: white; margin: 5px; }
+    .pie h2 { font-size: 14px; color: white; margin: 5px; }
+    #pie-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+}
+
+/* Estilos para pantalla móvil 1px a 679px */
+@media screen and (min-width: 1px) and (max-width: 679px) {
+    .contenedor { width: 100%; margin: 0 auto; }
+    .menu { height: 50px; display: flex; align-items: center; position: fixed; top: 0; width: 100%; background-color: rgba(255, 255, 255, 0.4); overflow: hidden; z-index: 10; }
+    #background-video { position: absolute; top: 0; left: 0; width: 100%; height: auto; z-index: -1; object-fit: cover; }
+    .menu .name { width: auto; font-size: 20px; font-family: Perpetua, serif; padding-left: 10px; color: white; }
+    .menu .sections { width: auto; margin-left: 5px; padding-left: 5px; }
+    .menu .sections a { text-decoration: none; font-size: 16px; font-family: Perpetua, serif; padding-left: 5px; color: white; border-right: 1px solid black; padding-right: 5px; }
+    .menu .sections a:last-child { border-right: none; }
+    .menu .icons { width: auto; height: 30px; display: flex; gap: 5px; margin-left: 5px; }
+    .icons img { width: 20px; height: 20px; color: white; }
+
+    .contenido { padding-top: 150px; text-align: center; padding: 15px; }
+    .artist-grid { display: flex; flex-direction: column; gap: 10px; justify-items: center; }
+    .artist { text-align: center; width: 140px; text-decoration: none; }
+    .artist-info { display: flex; flex-direction: column; align-items: center; gap: 10px; justify-content: center; text-align: center; }
+    .artist-img { width: 100%; height: auto; border-radius: 10px; transition: transform 0.3s; }
+    .artist-img:hover { transform: scale(1.05); }
+    .artist-bio { max-width: 100%; font-size: 12px; text-align: left; }
+
+    /* Botones de admin visibles */
+    .admin-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        justify-content: center;
+    }
+    .modify-button, .delete-button {
+        font-size: 12px;
+        padding: 6px 12px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    .modify-button { background-color: #FFA500; color: white; }
+    .modify-button:hover { background-color: #FF8C00; }
+    .delete-button { background-color: #F44336; color: white; }
+    .delete-button:hover { background-color: #D32F2F; }
+
+    .pie { height: 200px; background-color: rgba(0, 0, 0, 0.5); padding: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; }
+    .pie img { width: 10px; height: 10px; margin: 5px; }
+    .pie p { font-size: 12px; color: white; margin: 5px; }
+    .pie h2 { font-size: 12px; color: white; margin: 5px; }
+    #pie-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+}

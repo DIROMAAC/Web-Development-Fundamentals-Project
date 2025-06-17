@@ -1,0 +1,69 @@
+body{margin: 0px; padding: 0px;}
+
+/* Estilos para pantalla monitor mayores a 1025*/
+@media screen and (min-width: 1025px) {
+    .contenedor {width: 1170px; margin: 0 auto;} 
+    #background-video { position: fixed; top: 50%; left: 50%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%); filter: brightness(0.5); }
+    .login-register-container { display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; position: relative; }
+    .form-wrapper { display: flex; justify-content: space-between; width: 80%; max-width: 900px; background-color: rgba(255, 255, 255, 0.9); border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); overflow: hidden; padding: 20px; }
+    .login-section { width: 100%; padding: 40px 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #f9f9f9; border-radius: 8px; }
+    .login-section h2 { font-size: 24px; color: black; margin-bottom: 20px; }
+    .login-section ul { list-style: none; padding: 0; margin: 20px 0; }
+    .login-section ul li { font-size: 18px; margin-bottom: 10px; color: black; }
+    form { display: flex; flex-direction: column; gap: 15px; }
+    form button { padding: 10px 20px; font-size: 16px; background-color: black; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease; }
+    form button:hover { background-color: #444; }
+    form a { font-size: 14px; color: black; text-decoration: none; margin-top: 10px; }
+    form a:hover { text-decoration: underline; }
+    form input[type="text"] {padding: 10px; font-size: 14px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px; width: calc(100% - 20px); margin-bottom: -10px;}
+    form button {padding: 10px; font-size: 14px; background-color: #3A5DAE; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease; margin-top: 10px;}
+    form button:hover {background-color: #2E4C89;}
+
+}
+
+/* Estilos para pantalla tablet 680 y 1024 */
+@media screen and (min-width: 680px) and (max-width: 1024px) {
+    .contenedor {width: 90%; margin: 0 auto;} 
+    #background-video {position: fixed; top: 50%; left: 50%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%); filter: brightness(0.5);} 
+    .login-register-container {display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center; position: relative;} 
+    .form-wrapper {width: 95%; max-width: 700px; background-color: rgba(255, 255, 255, 0.95); border-radius: 10px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); padding: 20px;} 
+    .login-section {width: 100%; padding: 20px; display: flex; flex-direction: column; gap: 15px; align-items: center;} 
+    .login-section h2 {font-size: 20px; color: #333; margin-bottom: 10px;} 
+    .login-section h3, .login-section p {font-size: 16px; color: #555; margin: 5px 0;} 
+    form {display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 500px; margin: 0 auto;} 
+    form input[type="number"] {padding: 8px; font-size: 14px; border: 1px solid #ddd; border-radius: 5px; width: 100%;} 
+    form button {padding: 10px; font-size: 14px; background-color: black; color: white; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease;} 
+    form button:hover {background-color: black; transform: translateY(-2px); box-shadow: 0 4px 6px rgba(58, 93, 174, 0.5);} 
+    form a {font-size: 14px; color: black; text-decoration: none; transition: color 0.3s ease;} 
+    form a:hover {color: black; text-decoration: underline;} 
+    ul {list-style: none; padding: 0; margin: 10px 0;} 
+    ul li {font-size: 14px; color: #333; margin-bottom: 5px; display: flex; align-items: center; justify-content: space-between;} 
+    ul li form {display: inline-block;} 
+    ul li button {font-size: 12px; padding: 5px 10px; border: none; background-color: black; color: white; border-radius: 5px; cursor: pointer;} 
+    ul li button:hover {background-color: #D32F2F;} 
+    .login-section h3 {margin-top: 20px; font-size: 18px; color: #444;}
+}
+
+/* Estilos para pantalla móvil 1 y 679 */
+@media screen and (min-width: 1px) and (max-width: 679px) {
+    .contenedor {width: 95%; margin: 20px auto;} 
+    #background-video {position: fixed; top: 50%; left: 50%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%); filter: brightness(0.6);} 
+    .login-register-container {display: flex; justify-content: center; align-items: center; height: auto; text-align: center; position: relative; padding: 20px;} 
+    .form-wrapper {width: 100%; max-width: 400px; background-color: rgba(255, 255, 255, 0.95); border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); padding: 20px; margin-top: 20px;} 
+    .login-section {width: 100%; padding: 20px; display: flex; flex-direction: column; gap: 12px; align-items: center;} 
+    .login-section h2 {font-size: 18px; color: #333; margin-bottom: 15px;} 
+    .login-section h3, .login-section p {font-size: 14px; color: #555; margin: 5px 0;} 
+    form {display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 300px; margin: 0 auto;} 
+    form input[type="number"] {padding: 10px; font-size: 12px; border: 1px solid #ddd; border-radius: 5px; width: 100%;} 
+    form button {padding: 10px; font-size: 12px; background-color: black; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease;} 
+    form button:hover {background-color: black; transform: translateY(-2px); box-shadow: 0 3px 6px rgba(58, 93, 174, 0.5);} 
+    form a {font-size: 12px; color: black; text-decoration: none; transition: color 0.3s ease;} 
+    form a:hover {color: black; text-decoration: underline;} 
+    ul {list-style: none; padding: 0; margin: 15px 0;} 
+    ul li {font-size: 12px; color: #333; margin-bottom: 5px; display: flex; align-items: center; justify-content: space-between;} 
+    ul li form {display: inline-block;} 
+    ul li button {font-size: 10px; padding: 6px 8px; border: none; background-color: black; color: white; border-radius: 5px; cursor: pointer;} 
+    ul li button:hover {background-color: #D32F2F;} 
+    .login-section h3 {margin-top: 20px; font-size: 16px; color: #444;}
+}
+
