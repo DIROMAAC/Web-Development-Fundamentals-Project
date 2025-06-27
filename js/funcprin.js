@@ -1,4 +1,4 @@
-const accessToken = 'BQCSlCpuO2vz3CCnydkiIJxI8JPccS5cXCzjHFVcxz970AydqauXhyyoVVJq0q5ndnXB2QybC59DH-oomoFQnMQlaiEEsHAA-eJ9k1rQdeI_rIHkP2Ig6U3rMVOzymDLv_8NGuUXw9WTUlXUtPFXtTKKWS-H8dX59S3ajE5F0EwZ0RhbpP2oRZMf0H97a_FZHRFUYkc1eCHx4qbv9VLJHtn_yEQ';
+const accessToken = 'API_KEY';
 
 // Mostrar canciones de una playlist
 const playlistId = '7kfPf285KnlWUTbqaB1jnI'; // ID del álbum
