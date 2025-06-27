@@ -1,4 +1,4 @@
-const accessToken = 'BQAgOiw4OHwMpflwywsC8izgge4zyhM4zXlKf88gLCm7LPcH3fhWy09msqs8f9NJpK2OOSaGqE49zIHODRqiaKeadM30DpKXPAiFqjWGXpZAR8fBqprv_pa07282UW8Sm8ylQ0x20XzYSJNxtfrxF3alon2QcTbvOiIQ8mSyWFbVwS1SnVxtFj0XZJQ4lNetTd_K4ZBEwrEkCgme9YPQaM1l5GA';
+const accessToken = 'API_KEY';
 
 const apiUrl = 'https://api.spotify.com/v1/search?q=genre:pop&type=artist&limit=48';
 
